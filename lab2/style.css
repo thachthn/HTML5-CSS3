@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #86ceeb, #80e29e, #df68d5);
+  color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  background: linear-gradient(to right, #da54b1 0%, #1ba7a7 100%);
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.my-div {
+  background: linear-gradient(135deg, #5fd18b, #e073bc, #68bed4);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 700px;
+  margin: 15px 0;
+  padding: 10px 30px;
+  transition: transform 0.3s ease;
+}
+
+.my-div:hover {
+  transform: scale(1.02);
+}
+
+.my-div h2 {
+  color: #444;
+  margin-bottom: 10px;
+  border-left: 5px solid #6a11cb;
+  padding-left: 10px;
+}
+
+p,
+li {
+  font-size: 1em;
+  color: #555;
+}
+
+li {
+  margin-left: 20px;
+}
+
+.my-img {
+  border: 1px solid lightgreen;
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.my-img:hover {
+  transform: scale(1.05);
+}
+
+.div-lien-he {
+  background: linear-gradient(135deg, #5fd18b, #e075bd, #d468cb);
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+  margin-top: 25px;
+  padding: 20px 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.div-lien-he:hover {
+  transform: scale(1.02);
+}
+
+.div-lien-he a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.div-lien-he a:hover {
+  text-decoration: underline;
+}
+
+.last-updated {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.last-updated u {
+  color: #2575fc;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .my-div,
+  .div-lien-he {
+    width: 95%;
+    padding: 15px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
