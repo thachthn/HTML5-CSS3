@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Cá Nhân | Trần Hữu Ngọc Thạch</title>
+    <!-- Liên kết đến CSS thuần -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Logo favicon -->
+    <link rel="icon" href="./img/iconprofile.png" type="image/png" />
+    <!-- Icon/Font: Sử dụng Font Awesome cho các biểu tượng -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 1. HEADER: Logo + Thanh điều hướng chính -->
+    <header class="main-header">
+      <div class="container header-content">
+        <a href="#" class="logo"
+          ><i class="fas fa-laptop-code"></i>
+          <span>THN.T</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="#">Trang Chủ</a>
+          <a href="#about">Thông Tin</a>
+          <a href="#skills">Kỹ Năng</a>
+          <a href="#experience">Kinh Nghiệm</a>
+          <a href="#blog">Bài Viết</a>
+          <a href="contact.html" class="contact-button">Liên Hệ</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. CONTENT: Nội dung chính của trang -->
+    <main class="main-content">
+      <!-- A. Hero Section (Thông tin cá nhân cơ bản) -->
+      <section id="hero" class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text">
+            <p class="greeting">Xin chào, tôi là</p>
+            <h1><span class="highlight">Trần Hữu Ngọc Thạch</span></h1>
+            <h2>
+              Lập Trình Viên <span class="emphasis">Back-end</span> | Sinh viên
+              FPT Polytechnic
+            </h2>
+            <p class="intro-text">
+              Tôi là một sinh viên năm cuối đam mê xây dựng hệ thống và API mạnh
+              mẽ. Tôi chuyên sử dụng các ngôn ngữ và công nghệ Backend để tạo ra
+              các giải pháp có khả năng mở rộng và hiệu suất cao.
+            </p>
+            <div class="hero-actions">
+              <a href="#experience" class="btn primary-btn"
+                >Xem Kinh Nghiệm <i class="fas fa-arrow-right"></i
+              ></a>
+              <a href="contact.html" class="btn secondary-btn"
+                >Liên Hệ Hợp Tác</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <!-- Ảnh đại diện (Sử dụng placeholder) -->
+            <img src="./img/avt.jpg" alt="Ảnh đại diện" />
+          </div>
+        </div>
+      </section>
+
+      <!-- B. Học vấn (Education) -->
+      <section id="education" class="section-padding section-white">
+        <div class="container">
+          <h3 class="section-title">Học Vấn</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>
+                  Cử Nhân Công Nghệ Thông Tin - Chuyên ngành Hệ thống & Lập
+                  trình Backend
+                </h4>
+                <p class="institution">FPT Polytechnic</p>
+                <p class="period">2025 - 2027 (Dự kiến tốt nghiệp)</p>
+                <p class="description">
+                  Hoàn thành các môn học chuyên sâu về Cơ sở dữ liệu, Lập trình
+                  hướng đối tượng (OOP), và Thiết kế hệ thống.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4>
+                  Khóa học chuyên sâu về Hệ thống API RESTful và Microservices
+                </h4>
+                <p class="institution">Udemy / Coursera</p>
+                <p class="period">08/2024 - 10/2024</p>
+                <p class="description">
+                  Nắm vững kiến thức xây dựng và triển khai các dịch vụ Back-end
+                  hiện đại, có khả năng mở rộng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C. Kinh nghiệm làm việc (Work Experience) -->
+      <section id="experience" class="section-padding section-light-gray">
+        <div class="container">
+          <h3 class="section-title">Kinh Nghiệm Làm Việc</h3>
+          <div class="job-list">
+            <div class="job-item">
+              <div class="job-period">03/2025 - Hiện tại</div>
+              <div class="job-details">
+                <h4>Thực tập sinh Lập trình Backend (Node.js/Python)</h4>
+                <p class="company">Công ty Cổ phần Công nghệ ABC</p>
+                <ul>
+                  <!-- CẬP NHẬT: Kinh nghiệm Backend -->
+                  <li>
+                    <i class="fas fa-check-circle"></i> Tham gia phát triển và
+                    bảo trì các API RESTful cho dự án thương mại điện tử.
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Tối ưu hóa truy vấn cơ
+                    sở dữ liệu (MongoDB/SQL) và hiệu suất máy chủ.
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Triển khai các bài kiểm
+                    thử tự động (Unit Test, Integration Test) cho các dịch vụ.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-item">
+              <div class="job-period">06/2025 - 10/2025</div>
+              <div class="job-details">
+                <h4>Cộng tác viên Phân tích Dữ liệu và Hệ thống</h4>
+                <p class="company">Blog Công nghệ XYZ</p>
+                <ul>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Viết và biên tập hơn 15
+                    bài viết về kiến trúc hệ thống, Docker và Database.
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Đóng góp vào việc tăng
+                    traffic website thông qua nội dung chất lượng.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- D. Kỹ năng (Skills: Cứng + Mềm) -->
+      <section id="skills" class="section-padding section-white">
+        <div class="container">
+          <h3 class="section-title">Kỹ Năng</h3>
+          <div class="skills-grid">
+            <!-- Kỹ năng Cứng (Hard Skills) -->
+            <div class="skill-group">
+              <h4 class="skill-title">Kỹ Năng Cứng (Hard Skills)</h4>
+              <!-- CẬP NHẬT: Kỹ năng Backend -->
+              <div class="skill-item">
+                <span class="skill-name">Python / Node.js (Express)</span>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width: 95%">95%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Database (MySQL, MongoDB)</span>
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width: 85%">85%</div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name"
+                  >API Development (RESTful) & Cloud (AWS/Azure)</span
+                >
+                <div class="progress-bar-container">
+                  <div class="progress-bar" style="width: 90%">90%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kỹ năng Mềm (Soft Skills) -->
+            <div class="skill-group">
+              <h4 class="skill-title">Kỹ Năng Mềm (Soft Skills)</h4>
+              <ul class="soft-skills-list">
+                <li>
+                  <i class="fas fa-handshake"></i> Giải quyết vấn đề và Tư duy
+                  phản biện.
+                </li>
+                <li>
+                  <i class="fas fa-users"></i> Làm việc nhóm và Giao tiếp hiệu
+                  quả.
+                </li>
+                <li>
+                  <i class="fas fa-book-open"></i> Tự học và Thích nghi nhanh
+                  với công nghệ mới.
+                </li>
+                <li>
+                  <i class="fas fa-clock"></i> Quản lý thời gian và Hoàn thành
+                  deadline.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- E. Bài viết nổi bật (Featured Articles) -->
+      <section id="blog" class="section-padding section-light-gray">
+        <div class="container">
+          <h3 class="section-title">Bài Viết Nổi Bật</h3>
+          <div class="articles-grid">
+            <!-- Bài viết 1 -->
+            <article class="article-card">
+              <img
+                src="https://placehold.co/400x200/4C51BF/ffffff?text=API+Design"
+                alt="Hình minh họa bài viết 1"
+                class="article-image"
+              />
+              <div class="article-content">
+                <!-- CẬP NHẬT: Nội dung Backend -->
+                <h4>
+                  Thiết kế API RESTful tiêu chuẩn cho ứng dụng đa nền tảng
+                </h4>
+                <p>
+                  Phân tích các nguyên tắc cốt lõi của REST, xử lý mã trạng thái
+                  HTTP và thiết kế đường dẫn tối ưu.
+                </p>
+                <a href="article-detail-1.html" class="read-more"
+                  >Đọc thêm &rarr;</a
+                >
+              </div>
+            </article>
+
+            <!-- Bài viết 2 -->
+            <article class="article-card">
+              <img
+                src="https://placehold.co/400x200/2B6CB0/ffffff?text=Database+Optimization"
+                alt="Hình minh họa bài viết 2"
+                class="article-image"
+              />
+              <div class="article-content">
+                <!-- CẬP NHẬT: Nội dung Backend -->
+                <h4>
+                  Tối ưu hóa truy vấn Database SQL và NoSQL để tăng hiệu suất
+                </h4>
+                <p>
+                  Hướng dẫn chi tiết về việc sử dụng index, phân vùng dữ liệu và
+                  tối ưu hóa các câu truy vấn phức tạp.
+                </p>
+                <a href="article-detail-2.html" class="read-more"
+                  >Đọc thêm &rarr;</a
+                >
+              </div>
+            </article>
+
+            <!-- Bài viết 3 -->
+            <article class="article-card">
+              <img
+                src="https://placehold.co/400x200/D53F8C/ffffff?text=Node.js+Microservices"
+                alt="Hình minh họa bài viết 3"
+                class="article-image"
+              />
+              <div class="article-content">
+                <!-- CẬP NHẬT: Nội dung Backend -->
+                <h4>
+                  Xây dựng Microservices với Node.js và Docker trong 10 bước
+                </h4>
+                <p>
+                  Hướng dẫn triển khai kiến trúc dịch vụ nhỏ, quản lý container
+                  và giao tiếp giữa các dịch vụ.
+                </p>
+                <a href="article-detail-3.html" class="read-more"
+                  >Đọc thêm &rarr;</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. FOOTER: Menu phụ, thông tin liên hệ, liên kết mạng xã hội -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <!-- Cột 1: Giới thiệu ngắn -->
+        <div class="footer-info">
+          <h5 class="footer-title">Trần Hữu Ngọc Thạch</h5>
+          <p>
+            Lập trình viên Back-end với niềm đam mê tạo ra các trải nghiệm web
+            mượt mà và trực quan. Sẵn sàng hợp tác.
+          </p>
+        </div>
+        <!-- Cột 2: Menu phụ -->
+        <div class="footer-links">
+          <h5 class="footer-title">Menu Phụ</h5>
+          <ul>
+            <li><a href="#education">Học Vấn</a></li>
+            <li><a href="#experience">Kinh Nghiệm</a></li>
+            <li><a href="privacy.html">Chính Sách</a></li>
+          </ul>
+        </div>
+        <!-- Cột 3: Thông tin liên hệ -->
+        <div class="footer-contact">
+          <h5 class="footer-title">Liên Hệ</h5>
+          <p><i class="fas fa-envelope"></i> tranhuuthach15426@gmail.com</p>
+          <p><i class="fas fa-phone"></i> (+84) 982609465</p>
+          <p><i class="fas fa-map-marker-alt"></i> Hà Tĩnh, Việt Nam</p>
+        </div>
+        <!-- Cột 4: Mạng xã hội -->
+        <div class="footer-social">
+          <h5 class="footer-title">Mạng Xã Hội</h5>
+          <div class="social-icons">
+            <a
+              href="http://facebook.com/thach.tranhuu.154"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://github.com/thachthn"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2025 Trần Hữu Ngọc Thạch. Thiết kế Portfolio cá nhân.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script đơn giản cho toggle menu trên mobile -->
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".main-nav").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

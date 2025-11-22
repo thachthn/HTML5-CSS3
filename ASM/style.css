@@ -1,0 +1,685 @@
+/* ----------------------------------------------------------------
+   1. GLOBAL STYLES & RESET
+   - Định nghĩa biến màu sắc và font chữ
+---------------------------------------------------------------- */
+
+:root {
+  --primary-color: #4c51bf; /* Màu tím Indigo */
+  --secondary-color: #2b6cb0; /* Màu xanh đậm */
+  --accent-color: #d53f8c; /* Màu hồng nhấn */
+  --text-dark: #1a202c;
+  --text-light: #4a5568;
+  --background-white: #ffffff;
+  --background-light: #f7fafc;
+  --border-radius: 10px;
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  transition: background-color 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.2s, opacity 0.2s;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* ----------------------------------------------------------------
+   2. HEADER & NAVIGATION
+---------------------------------------------------------------- */
+
+.main-header {
+  background-color: var(--background-white);
+  box-shadow: var(--shadow-base);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo i {
+  font-size: 2.5rem;
+  margin-bottom: 2px;
+}
+.logo span {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+.main-nav a {
+  color: var(--text-light);
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.contact-button {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-left: 15px;
+  border-bottom: none !important;
+  box-shadow: 0 4px 10px rgba(76, 81, 191, 0.4);
+  transform: translateY(0);
+}
+
+.contact-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(76, 81, 191, 0.5);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+/* ----------------------------------------------------------------
+   3. SECTION STYLES (Định kiểu chung cho các khối nội dung)
+---------------------------------------------------------------- */
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-white {
+  background-color: var(--background-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-base);
+  margin-bottom: 40px;
+}
+
+.section-light-gray {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-base);
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* ----------------------------------------------------------------
+   4. HERO SECTION (Giới thiệu)
+---------------------------------------------------------------- */
+
+.hero-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #e0e7ff 0%, #ffffff 100%);
+  border-bottom: 8px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text .greeting {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.hero-text .highlight {
+  color: var(--primary-color);
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.hero-text .emphasis {
+  color: var(--accent-color);
+}
+
+.hero-text .intro-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero-image {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 6px solid var(--background-white);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ĐIỀU CHỈNH QUAN TRỌNG: Căn chỉnh ảnh chính giữa */
+  object-position: 50% 30%;
+  /* Hoặc bạn có thể thử một giá trị khác nếu 'center center' chưa hoàn hảo, ví dụ:
+       object-position: 50% 30%; // Dịch chuyển ảnh lên trên 1 chút
+       object-position: 50% 20%; // Dịch chuyển ảnh lên trên nhiều hơn
+    */
+}
+
+.hero-actions .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.hero-actions .primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 81, 191, 0.6);
+}
+
+.hero-actions .primary-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.hero-actions .secondary-btn {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.hero-actions .secondary-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ----------------------------------------------------------------
+   5. EDUCATION & EXPERIENCE (Timeline/Job List)
+---------------------------------------------------------------- */
+
+.timeline {
+  border-left: 3px solid #e2e8f0;
+  padding-left: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  border: 3px solid var(--background-white);
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.timeline-content .institution {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.timeline-content .period {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.job-list .job-item {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.job-list .job-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.job-period {
+  font-weight: 600;
+  color: var(--text-light);
+  min-width: 180px;
+}
+
+.job-details h4 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.job-details .company {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.job-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.job-details li {
+  margin-bottom: 5px;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+.job-details li i {
+  color: #48bb78; /* Green check */
+  margin-right: 8px;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------------------------------------
+   6. SKILLS (Kỹ năng)
+---------------------------------------------------------------- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.progress-bar-container {
+  background-color: #e2e8f0;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: right;
+  padding-right: 5px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  line-height: 10px;
+  transition: width 1.5s ease-out;
+}
+
+.soft-skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.soft-skills-list li {
+  background-color: var(--background-light);
+  padding: 12px 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  border-left: 4px solid var(--secondary-color);
+  transition: border-left 0.3s;
+}
+
+.soft-skills-list li:hover {
+  border-left: 4px solid var(--accent-color);
+}
+
+.soft-skills-list li i {
+  margin-right: 10px;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+/* ----------------------------------------------------------------
+   7. BLOG / ARTICLES (Bài viết nổi bật)
+---------------------------------------------------------------- */
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.article-card {
+  background-color: var(--background-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-base);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e2e8f0;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 20px;
+}
+
+.article-content h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  /* Giới hạn 2 dòng */
+  height: 3.6rem;
+  overflow: hidden;
+}
+
+.article-content p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  /* Giới hạn 3 dòng */
+  height: 2.85rem;
+  overflow: hidden;
+}
+
+.read-more {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+/* ----------------------------------------------------------------
+   8. FOOTER
+---------------------------------------------------------------- */
+
+.main-footer {
+  background-color: var(--text-dark);
+  color: white;
+  padding-top: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #4a5568;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.footer-info p {
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #a0aec0;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+  color: #a0aec0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.social-icons a {
+  color: #a0aec0;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+/* ----------------------------------------------------------------
+   9. RESPONSIVE DESIGN (Media Queries)
+---------------------------------------------------------------- */
+
+/* Tablet & Nhỏ hơn */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1; /* Đưa ảnh lên trên */
+    margin-bottom: 30px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-list .job-item {
+    flex-direction: column;
+  }
+
+  .job-period {
+    margin-bottom: 5px;
+  }
+}
+
+/* Mobile & Nhỏ hơn */
+@media (max-width: 768px) {
+  .main-header {
+    height: auto;
+  }
+
+  .header-content {
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-white);
+    /* Vị trí tuyệt đối để thả xuống dưới header */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  /* Hiển thị menu khi nhấn nút toggle */
+  .main-nav.active {
+    display: flex;
+    /* Chuyển lại relative để tránh lỗi z-index phức tạp khi không cần */
+    position: relative;
+    top: 0;
+  }
+
+  .main-nav a {
+    padding: 10px 20px;
+    border-bottom: none;
+    border-left: 4px solid transparent;
+  }
+
+  .main-nav a:hover {
+    border-left: 4px solid var(--primary-color);
+    background-color: #edf2f7;
+  }
+
+  .contact-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+}
