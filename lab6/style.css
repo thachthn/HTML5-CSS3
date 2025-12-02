@@ -1,0 +1,125 @@
+:root {
+  --bg-dark: #2c2c2c;
+  --header-bg: #353b5e;
+  --header-text: #ffffff;
+  --header-border: #4d5483;
+  --row-even-bg: #d4dce77a;
+  --row-odd-bg: #ffffff;
+  --row-hover-bg: #dceefc;
+  --highlight-bg: #90e773b9;
+  --text-color: #333333;
+  --table-border-color: #e0e0e0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.table-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 90%;
+}
+
+.table-title {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 15px 20px 10px;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: left;
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-color);
+  font-size: 0.95em;
+}
+
+.modern-table thead th {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 0;
+  border: 1px solid var(--header-border);
+}
+
+.col-name {
+  text-align: center !important;
+  padding-left: 20px;
+}
+
+.sub-header-math,
+.sub-header-english {
+  background-color: var(--header-bg);
+  font-weight: 400;
+  padding: 8px 0;
+  border-right: 1px solid var(--header-border);
+}
+
+.col-status {
+  border-right: none !important;
+}
+.modern-table thead tr:last-child th:last-child {
+  border-right: none;
+}
+
+.modern-table tbody td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--table-border-color);
+  transition: background-color 0.2s ease;
+}
+
+.modern-table tbody .col-name {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.modern-table tbody tr:nth-child(even) {
+  background-color: var(--row-even-bg);
+}
+
+.modern-table tbody tr:nth-child(odd) {
+  background-color: var(--row-odd-bg);
+}
+
+.modern-table tbody tr:not(.row-passed):hover {
+  background-color: var(--row-hover-bg) !important;
+}
+
+.row-passed:hover {
+  background-color: var(--highlight-bg) !important;
+  cursor: pointer;
+}
+
+.modern-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.col-id {
+  width: 5%;
+}
+.col-name {
+  width: 20%;
+}
+.col-status {
+  width: 15%;
+}
+
+.modern-table thead .sub-header-math,
+.modern-table thead .sub-header-english,
+.modern-table tbody tr td:nth-child(3),
+.modern-table tbody tr td:nth-child(4) {
+  width: 20%;
+}
