@@ -3,84 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đăng Nhập - THN.T Portfolio</title>
-    <!-- Liên kết đến CSS chung của Portfolio -->
+    <title>Liên Hệ & Hợp Tác | Trần Hữu Ngọc Thạch</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- Liên kết đến CSS riêng cho trang Login -->
-    <link rel="stylesheet" href="../css/login-style.css" />
-    <!-- Font Awesome Icons -->
+    <link rel="icon" href="../img/iconprofile.png" type="image/png" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
-    <div class="login-container">
-      <div class="login-box">
-        <!-- Logo và tiêu đề -->
-        <div class="login-header">
-          <!-- Sử dụng logo đã được thiết kế: Icon trên, chữ THN.T dưới -->
-          <a href="../html/index.html" class="login-logo">
-            <i class="fas fa-laptop-code"></i>
-            <br />
-            <span>THN.T</span>
-          </a>
-          <h1>Đăng Nhập Hệ Thống</h1>
-          <p>Chào mừng trở lại. Vui lòng nhập thông tin của bạn.</p>
+    <header class="main-header">
+      <div class="container header-content">
+        <a href="./index.html" class="logo"
+          ><i class="fas fa-laptop-code"></i>
+          <span>THN.T</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="./index.html">Trang Chủ</a>
+          <a href="./about.html">Thông Tin</a>
+          <a href="./skills_projects.html">Kỹ Năng & Dự án</a>
+          <a href="./articles.html">Bài Viết</a>
+          <a href="./login.html" class="contact-button">Liên Hệ</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="section-padding section-light-gray">
+        <div class="container contact-hero-container">
+          <div class="contact-info-block">
+            <h1 class="section-title">Liên Hệ Hợp Tác</h1>
+            <p class="contact-intro-text">
+              Bạn có một ý tưởng thú vị? Một cơ hội nghề nghiệp phù hợp? Hoặc
+              chỉ muốn nói lời chào? Hãy điền vào form hoặc liên hệ trực tiếp
+              qua các thông tin bên dưới.
+            </p>
+
+            <div class="contact-details">
+              <div class="info-item">
+                <strong><i class="fas fa-envelope"></i> Email Cá Nhân</strong>
+                <span>tranhuuthach15426@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <strong><i class="fas fa-phone"></i> Điện Thoại</strong>
+                <span>(+84) 982609465</span>
+              </div>
+              <div class="info-item">
+                <strong><i class="fas fa-map-marker-alt"></i> Địa chỉ</strong>
+                <span>Hà Tĩnh, Việt Nam</span>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <a
+                href="http://facebook.com/thach.tranhuu.154"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://github.com/thachthn"
+                target="_blank"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="contact-form-block">
+            <h3 class="card-title">Gửi Lời Nhắn</h3>
+            <form id="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Họ và Tên (*)</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Tên của bạn..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Liên Hệ (*)</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email của bạn..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Tiêu Đề</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Hợp tác, công việc, ..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Nội Dung (*)</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Thông điệp chi tiết của bạn..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary-btn submit-btn">
+                Gửi Tin Nhắn <i class="fas fa-paper-plane"></i>
+              </button>
+
+              <div
+                id="success-message"
+                class="alert-success"
+                style="display: none"
+              >
+                <i class="fas fa-check-circle"></i> Tin nhắn của bạn đã được gửi
+                thành công! Tôi sẽ liên hệ lại sớm nhất.
+              </div>
+            </form>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <form action="#" method="POST" class="login-form">
-          <!-- Trường Email -->
-          <div class="form-group">
-            <label for="email">Email</label>
-            <div class="input-icon-wrapper">
-              <i class="fas fa-envelope icon"></i>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Nhập địa chỉ email của bạn"
-                required
-              />
-            </div>
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-info">
+          <h5 class="footer-title">Trần Hữu Ngọc Thạch</h5>
+          <p>
+            Lập trình viên Back-end với niềm đam mê tạo ra các trải nghiệm web
+            mượt mà và trực quan. Sẵn sàng hợp tác.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h5 class="footer-title">Menu Phụ</h5>
+          <ul>
+            <li><a href="./index.html#education">Học Vấn</a></li>
+            <li><a href="./index.html#experience">Kinh Nghiệm</a></li>
+            <li><a href="privacy.html">Chính Sách</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5 class="footer-title">Liên Hệ</h5>
+          <p><i class="fas fa-envelope"></i> tranhuuthach15426@gmail.com</p>
+          <p><i class="fas fa-phone"></i> (+84) 982609465</p>
+          <p><i class="fas fa-map-marker-alt"></i> Hà Tĩnh, Việt Nam</p>
+        </div>
+        <div class="footer-social">
+          <h5 class="footer-title">Mạng Xã Hội</h5>
+          <div class="social-icons">
+            <a
+              href="http://facebook.com/thach.tranhuu.154"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://github.com/thachthn"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </div>
-
-          <!-- Trường Mật khẩu -->
-          <div class="form-group">
-            <label for="password">Mật khẩu</label>
-            <div class="input-icon-wrapper">
-              <i class="fas fa-lock icon"></i>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Nhập mật khẩu"
-                required
-              />
-            </div>
-          </div>
-
-          <!-- Lựa chọn và Quên mật khẩu -->
-          <div class="form-options">
-            <div class="remember-me">
-              <input type="checkbox" id="remember" name="remember" />
-              <label for="remember">Ghi nhớ tôi</label>
-            </div>
-            <a href="#" class="forgot-password">Quên mật khẩu?</a>
-          </div>
-
-          <!-- Nút Đăng nhập -->
-          <button type="submit" class="btn-login">
-            Đăng Nhập
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </form>
-
-        <!-- Chuyển hướng đăng ký -->
-        <div class="login-footer-text">
-          Chưa có tài khoản? <a href="#" class="signup-link">Đăng Ký Ngay</a>
         </div>
       </div>
-    </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2025 Trần Hữu Ngọc Thạch. Thiết kế Portfolio cá nhân.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".main-nav").classList.toggle("active");
+        });
+
+      // Script xử lý form (Chỉ là Mockup Frontend)
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Ngăn chặn gửi form thực tế
+
+          // Lấy thông báo thành công
+          const successMessage = document.getElementById("success-message");
+          const submitButton = document.querySelector(".submit-btn");
+
+          // Thay đổi trạng thái nút
+          submitButton.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Đang gửi...';
+          submitButton.disabled = true;
+
+          // Giả lập quá trình gửi (Ví dụ: 1.5 giây)
+          setTimeout(() => {
+            // Đặt lại nút
+            submitButton.innerHTML =
+              'Gửi Tin Nhắn <i class="fas fa-paper-plane"></i>';
+            submitButton.disabled = false;
+
+            // Hiển thị thông báo thành công
+            successMessage.style.display = "block";
+
+            // Xóa form sau khi gửi thành công
+            this.reset();
+
+            // Tự động ẩn thông báo sau 5 giây
+            setTimeout(() => {
+              successMessage.style.display = "none";
+            }, 5000);
+          }, 1500);
+        });
+    </script>
   </body>
 </html>
