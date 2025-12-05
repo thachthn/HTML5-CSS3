@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài Viết Công Nghệ & Lập Trình | Trần Hữu Ngọc Thạch</title>
+    <!-- Liên kết đến CSS thuần -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Logo favicon -->
+    <link rel="icon" href="../img/iconprofile.png" type="image/png" />
+    <!-- Icon/Font: Sử dụng Font Awesome cho các biểu tượng -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 1. HEADER: Logo + Thanh điều hướng chính -->
+    <header class="main-header">
+      <div class="container header-content">
+        <a href="../html/index.html" class="logo"
+          ><i class="fas fa-laptop-code"></i>
+          <span>THN.T</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="./index.html">Trang Chủ</a>
+          <a href="./about.html">Thông Tin</a>
+          <a href="./skills_projects.html">Kỹ Năng & Dự án</a>
+          <a href="./articles.html">Bài Viết</a>
+          <a href="./login.html" class="contact-button">Liên Hệ</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- 2. HERO BLOG: Banner nhẹ cho trang blog -->
+      <section class="blog-hero section-padding">
+        <div class="container">
+          <h1 class="page-title-main">Blog Công Nghệ & Lập Trình</h1>
+          <p class="page-subtitle-main">
+            Nơi chia sẻ kiến thức, kinh nghiệm và những khám phá mới nhất về thế
+            giới code.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. DANH SÁCH BÀI VIẾT -->
+      <section class="section-padding pt-0">
+        <div class="container articles-grid-main">
+          <!-- Bài viết 1 -->
+          <a href="./article-detail.html" class="blog-article-card">
+            <img
+              src="https://placehold.co/600x400/4c51bf/ffffff?text=React+Hooks"
+              alt="Hình ảnh bài viết về React Hooks"
+              class="article-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/4c51bf/ffffff?text=Lập+trình'"
+            />
+            <div class="article-content">
+              <span class="article-category">Frontend</span>
+              <h4>Sức Mạnh của React Hooks: useState và useEffect cơ bản</h4>
+              <p>
+                Tìm hiểu về hai Hooks cơ bản và quan trọng nhất trong React:
+                useState để quản lý trạng thái, và useEffect để xử lý side
+                effects trong component.
+              </p>
+              <div class="article-meta-bottom">
+                <span><i class="fas fa-calendar-alt"></i> 10/06/2025</span>
+                <span><i class="fas fa-clock"></i> 5 phút đọc</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 2 -->
+          <a href="./article-detail.html" class="blog-article-card">
+            <img
+              src="https://placehold.co/600x400/2b6cb0/ffffff?text=Microservices"
+              alt="Hình ảnh bài viết về Microservices"
+              class="article-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/2b6cb0/ffffff?text=Hệ+thống'"
+            />
+            <div class="article-content">
+              <span class="article-category backend">Backend</span>
+              <h4>Kiến Trúc Microservices: Ưu và Nhược điểm khi Triển Khai</h4>
+              <p>
+                Phân tích sâu về mô hình kiến trúc Microservices, cách nó giúp
+                mở rộng và duy trì các ứng dụng phức tạp.
+              </p>
+              <div class="article-meta-bottom">
+                <span><i class="fas fa-calendar-alt"></i> 25/05/2025</span>
+                <span><i class="fas fa-clock"></i> 8 phút đọc</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 3 -->
+          <a href="./article-detail.html" class="blog-article-card">
+            <img
+              src="https://placehold.co/600x400/d53f8c/ffffff?text=SQL"
+              alt="Hình ảnh bài viết về SQL và tối ưu hóa"
+              class="article-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/d53f8c/ffffff?text=Cơ+sở+dữ+liệu'"
+            />
+            <div class="article-content">
+              <span class="article-category database">Database</span>
+              <h4>5 Thủ Thuật Tối Ưu Hóa Câu Lệnh SQL cho Hiệu Năng Cao</h4>
+              <p>
+                Các mẹo và kỹ thuật để viết các truy vấn SQL hiệu quả hơn, giảm
+                thiểu thời gian xử lý và tải hệ thống.
+              </p>
+              <div class="article-meta-bottom">
+                <span><i class="fas fa-calendar-alt"></i> 01/05/2025</span>
+                <span><i class="fas fa-clock"></i> 6 phút đọc</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 4 -->
+          <a href="./article-detail.html" class="blog-article-card">
+            <img
+              src="https://placehold.co/600x400/48bb78/ffffff?text=Cloud"
+              alt="Hình ảnh bài viết về Cloud Computing"
+              class="article-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/48bb78/ffffff?text=Điện+toán+đám+mây'"
+            />
+            <div class="article-content">
+              <span class="article-category devops">DevOps</span>
+              <h4>Giới Thiệu Cơ Bản về Điện Toán Đám Mây (Cloud Computing)</h4>
+              <p>
+                Tổng quan về các mô hình IaaS, PaaS, SaaS và cách các dịch vụ
+                đám mây như AWS/Azure đang thay đổi ngành công nghiệp phần mềm.
+              </p>
+              <div class="article-meta-bottom">
+                <span><i class="fas fa-calendar-alt"></i> 15/04/2025</span>
+                <span><i class="fas fa-clock"></i> 10 phút đọc</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 5 -->
+          <a href="./article-detail.html" class="blog-article-card">
+            <img
+              src="https://placehold.co/600x400/805ad5/ffffff?text=Java+Spring"
+              alt="Hình ảnh bài viết về Java Spring Boot"
+              class="article-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/805ad5/ffffff?text=Java+Backend'"
+            />
+            <div class="article-content">
+              <span class="article-category backend">Backend</span>
+              <h4>
+                Xây Dựng RESTful API đầu tiên với Spring Boot trong 15 phút
+              </h4>
+              <p>
+                Hướng dẫn từng bước để thiết lập dự án Spring Boot, tạo
+                Controller và triển khai API đơn giản nhất.
+              </p>
+              <div class="article-meta-bottom">
+                <span><i class="fas fa-calendar-alt"></i> 20/03/2025</span>
+                <span><i class="fas fa-clock"></i> 7 phút đọc</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bài viết 6 -->
+          <a href="./article-detail.html" class="blog-article-card">
+            <img
+              src="https://placehold.co/600x400/e9d8fd/1a202c?text=Testing"
+              alt="Hình ảnh bài viết về Unit Testing"
+              class="article-image"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/e9d8fd/1a202c?text=Kiểm+thử'"
+            />
+            <div class="article-content">
+              <span class="article-category quality">Quality</span>
+              <h4>Tại Sao Unit Test Lại Quan Trọng và Cách Viết Hiệu Quả</h4>
+              <p>
+                Đánh giá tầm quan trọng của Unit Test trong quy trình phát triển
+                phần mềm và các nguyên tắc vàng khi viết test cases.
+              </p>
+              <div class="article-meta-bottom">
+                <span><i class="fas fa-calendar-alt"></i> 05/03/2025</span>
+                <span><i class="fas fa-clock"></i> 5 phút đọc</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 4. FOOTER -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <!-- Cột 1: Giới thiệu ngắn -->
+        <div class="footer-info">
+          <h5 class="footer-title">Trần Hữu Ngọc Thạch</h5>
+          <p>
+            Lập trình viên Back-end với niềm đam mê tạo ra các trải nghiệm web
+            mượt mà và trực quan. Sẵn sàng hợp tác.
+          </p>
+        </div>
+        <!-- Cột 2: Menu phụ -->
+        <div class="footer-links">
+          <h5 class="footer-title">Menu Phụ</h5>
+          <ul>
+            <li><a href="#education">Học Vấn</a></li>
+            <li><a href="#experience">Kinh Nghiệm</a></li>
+            <li><a href="privacy.html">Chính Sách</a></li>
+          </ul>
+        </div>
+        <!-- Cột 3: Thông tin liên hệ -->
+        <div class="footer-contact">
+          <h5 class="footer-title">Liên Hệ</h5>
+          <p><i class="fas fa-envelope"></i> tranhuuthach15426@gmail.com</p>
+          <p><i class="fas fa-phone"></i> (+84) 982609465</p>
+          <p><i class="fas fa-map-marker-alt"></i> Hà Tĩnh, Việt Nam</p>
+        </div>
+        <!-- Cột 4: Mạng xã hội -->
+        <div class="footer-social">
+          <h5 class="footer-title">Mạng Xã Hội</h5>
+          <div class="social-icons">
+            <a
+              href="http://facebook.com/thach.tranhuu.154"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://github.com/thachthn"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &copy; 2025 Trần Hữu Ngọc Thạch. Thiết kế Portfolio cá nhân.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle menu cho mobile (giữ nguyên logic từ index.html)
+      document.querySelector(".menu-toggle").addEventListener("click", () => {
+        document.querySelector(".main-nav").classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
