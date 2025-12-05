@@ -155,7 +155,7 @@ a:hover {
   font-size: 2rem;
   font-weight: 700;
   color: var(--secondary-color);
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* ĐÃ CHỈNH SỬA: Tăng khoảng cách dưới tiêu đề */
   padding-bottom: 10px;
   position: relative;
   display: inline-block;
@@ -720,6 +720,162 @@ a:hover {
 }
 
 /* ... các style responsive khác ... */
+
+/* ----------------------------------------------------------------
+   12. SKILLS & PROJECTS PAGE STYLES (Dành cho skills_projects.html)
+---------------------------------------------------------------- */
+
+/* -- Timeline 2 Cột Dành Riêng Cho Trang Kỹ Năng (.projects-timeline) -- */
+.projects-timeline {
+  position: relative;
+  margin: 0 auto 50px;
+  padding-bottom: 30px;
+  /* THÊM: Đảm bảo khoảng cách an toàn từ lề container */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Đường kẻ dọc chính */
+.projects-timeline::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #e2e8f0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.projects-timeline .timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Chấm tròn mốc thời gian */
+.projects-timeline .timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: var(--background-white);
+  border: 4px solid var(--accent-color);
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.projects-timeline .timeline-item:hover::after {
+  transform: scale(1.2);
+  border-color: var(--primary-color);
+}
+
+.projects-timeline .timeline-item-content {
+  padding: 20px 30px;
+  padding: auto; /* TĂNG PADDING để làm hộp trông RỘNG hơn */
+  background-color: var(--background-white);
+  position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-base);
+
+  /* Viền trái đồng nhất 4px */
+  border-left: 4px solid var(--secondary-color);
+  /* THÊM VIỀN PHẢI MỎNG để tạo hiệu ứng nổi bật */
+  border-right: 1px solid #e2e8f0;
+  transition: all 0.3s;
+}
+
+.projects-timeline .timeline-item-content:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  /* Khi hover, làm nổi bật đường viền phải */
+  border-right: 1px solid var(--secondary-color);
+}
+
+.projects-timeline .timeline-item-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.projects-timeline .timeline-item-content .period {
+  font-style: italic;
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Item bên trái (LEFT) */
+.projects-timeline .left {
+  left: 0;
+}
+
+/* Item bên phải (RIGHT) */
+.projects-timeline .right {
+  left: 50%;
+}
+
+/* CĂN CHỈNH: Điều chỉnh vị trí chấm tròn để khớp với đường kẻ dọc */
+.projects-timeline .left::after {
+  left: unset;
+  right: -9px;
+}
+
+.projects-timeline .right::after {
+  left: -9px;
+  right: unset;
+}
+
+/* -- Skills (Kỹ năng) -- */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px;
+}
+
+#education-experience {
+  padding: 50px;
+}
+
+#skills {
+  padding: 50px;
+}
+
+#projects {
+  padding: 50px;
+}
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  background-color: var(--background-white);
+  /* CHỈNH SỬA TẠI ĐÂY: Tăng padding từ 15px lên 18px */
+  padding: 18px;
+  margin-bottom: 12px; /* Tăng margin bottom từ 10px lên 12px */
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.2s;
+}
+
+.skill-list li:hover {
+  border-left: 5px solid var(--accent-color);
+  background-color: #f0f4f7;
+}
+
+.skill-list li i {
+  margin-right: 10px;
+  color: var(--accent-color);
+}
 
 /* Mobile & Nhỏ hơn */
 @media (max-width: 768px) {
