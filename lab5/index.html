@@ -4,32 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Đăng Ký Cao Cấp</title>
-    <!-- Tải font Inter từ Google Fonts -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Link css -->
+
     <link rel="stylesheet" href="style.css" />
-    <!-- Icon từ Lucide (Dùng SVG nội tuyến trong JS) -->
+
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
   <body>
-    <!-- Hiệu ứng ánh sáng nền -->
     <div class="background-lights">
       <div class="light-sphere light-1"></div>
       <div class="light-sphere light-2"></div>
     </div>
 
     <div class="container">
-      <!-- Dark Mode Toggle -->
       <div class="toggle-wrapper">
         <button
           id="theme-toggle"
           class="toggle-button"
           title="Chuyển đổi chế độ sáng/tối"
         >
-          <!-- Chỉ sử dụng 1 thẻ SVG duy nhất, nội dung sẽ được thay đổi bằng JS -->
           <svg
             id="theme-icon"
             class="svg-icon"
@@ -42,9 +39,7 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-          >
-            <!-- Nội dung ban đầu sẽ được JS thiết lập -->
-          </svg>
+          ></svg>
         </button>
       </div>
 
@@ -125,7 +120,6 @@
             </div>
           </fieldset>
 
-          <!-- TUỲ CHỌN NÂNG CAO -->
           <fieldset class="fieldset">
             <legend>Thiết Lập Tùy Chọn</legend>
 
@@ -188,7 +182,6 @@
             </div>
           </fieldset>
 
-          <!-- ĐIỀU KHOẢN & NÚT BẤM -->
           <div class="checkbox-group">
             <input
               type="checkbox"
@@ -250,27 +243,22 @@
         const rangeValue = document.getElementById("range-value");
         const themeToggle = document.getElementById("theme-toggle");
 
-        // Lấy nội dung SVG paths của icon Sun và Moon từ Lucide
         const sunSvgContent =
           '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M22 12h-2"></path><path d="M4 12H2"></path><path d="m18.36 5.64-.71.71"></path><path d="m6.34 17.66-.71.71"></path><path d="m17.66 6.34.71-.71"></path><path d="m5.64 18.36.71-.71"></path>';
         const moonSvgContent =
           '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>';
         const themeIconSvg = document.getElementById("theme-icon");
 
-        // --- Logic cho Form ---
         form.addEventListener("submit", (e) => {
           e.preventDefault();
 
-          // Lấy dữ liệu (Chỉ mô phỏng, không gửi đi thực tế)
           const formData = new FormData(form);
           const data = Object.fromEntries(formData.entries());
           console.log("Form Data Submitted:", data);
 
-          // Ẩn form và hiện thông báo thành công (thay thế alert)
           form.style.display = "none";
           successMessage.style.display = "flex";
 
-          // Đặt lại form sau 5 giây (tùy chọn)
           setTimeout(() => {
             form.reset();
             form.style.display = "block";
@@ -278,20 +266,15 @@
           }, 5000);
         });
 
-        // --- Logic cho Color Picker ---
         colorInput.addEventListener("input", (e) => {
           colorHex.textContent = e.target.value.toUpperCase();
         });
 
-        // --- Logic cho Range Slider ---
         rangeInput.addEventListener("input", (e) => {
           rangeValue.textContent = e.target.value;
         });
 
-        // --- Logic cho Dark Mode Toggle (Chỉ dùng 1 Icon) ---
-
         function updateToggleIcon(theme) {
-          // Đặt nội dung SVG cho icon
           if (theme === "dark") {
             themeIconSvg.innerHTML = moonSvgContent;
           } else {
@@ -299,7 +282,6 @@
           }
         }
 
-        // Kiểm tra theme đã lưu trữ hoặc theme hệ thống
         const currentTheme = localStorage.getItem("theme");
         if (currentTheme) {
           document.body.classList.add(currentTheme);
